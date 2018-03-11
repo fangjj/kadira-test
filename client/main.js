@@ -1,23 +1,30 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
-import '../imports/api/tasks.js';
+import { Tasks } from '../imports/api/tasks.js';
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
-
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
+Template.body.helpers({
+  tasks() {
+    return Tasks.find({});
   },
 });
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
+Template.body.onCreated(function bodyOnCreated() {
+  Meteor.subscribe('tasks');
+});
+
+Template.body.events({
+  'submit .new-task'(event) {
+    // Prevent default browser form submit
+    event.preventDefault();
+ 
+    // Get value from form element
+    const target = event.target;
+    const text = target.text.value;
+ 
+    // Insert a task into the collection
+    Meteor.call('tasks.insert', text);
+ 
+    // Clear form
+    target.text.value = '';
   },
 });
