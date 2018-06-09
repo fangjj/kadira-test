@@ -18,5 +18,5 @@ ecmascript@0.9.0              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.3.0            # Server-side component of the `meteor shell` command
 
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
-#meteorhacks:kadira           #生产坏境下使用这个包，移除kadira:debug包，有问题请联系我fangjimjim@qq.com，
+#meteorhacks:kadira           #生产坏境下使用这个包，移除kadira:debug包，有问题请联系www.kadira@qq.com，
 kadira:debug                  #本地坏境下使用这个包，移除kadira:debug包，否则会导致安全问题
