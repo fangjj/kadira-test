@@ -2,7 +2,7 @@
 kadira 调试Demo指南
 
 #meteorhacks:kadira           #生产坏境下使用这个包，移除kadira:debug包，有问题请联系www.kadira@qq.com，
-kadira:debug                  #本地坏境下使用这个包，移除kadira:debug包，否则会导致安全问题
+kadira:debug                  #本地坏境下使用这个包，移除kadira:debug包，否则会导致安全问题  #手动修改version 中 meteorhacks:kadira@2.30.4
 
 // 本地坏境下调试，打开https://debug.kadira.cn/debug, 填入本地程序localhost:3000即可
 
