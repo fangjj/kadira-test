@@ -19,4 +19,4 @@ shell-server@0.3.0            # Server-side component of the `meteor shell` comm
 
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 #meteorhacks:kadira           #生产坏境下使用这个包，移除kadira:debug包，有问题请联系www.kadira@qq.com，
-kadira:debug                  #本地坏境下使用这个包，移除kadira:debug包，否则会导致安全问题
+kadira:debug                  #本地坏境下使用这个包，移除kadira:debug包，否则会导致安全问题 #手动修改version 中 meteorhacks:kadira@2.30.4
